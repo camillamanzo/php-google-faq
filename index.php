@@ -58,17 +58,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <title>Google FAQ</title>
 </head>
 <body>
 
+    <div class="container">
+        <div class="row">
+            <section class="col-8 mx-auto mt-5">
 
-    <?php foreach($questions as $element) { ?>
-        
-    <h2><?php echo $element["question"]; ?></h2>
-    <p><?php echo $element["response"]; ?></p>
+                <!-- starting for each cycle on the array "question" -->
+                <?php foreach($questions as $element) { ?>
+
+                <!-- printing the question -->
+                <h2><?php echo $element["question"]; ?></h2>
+
+                <!-- printing the response -->
+                <p><?php echo $element["response"]; ?></p>
+
+                <br>
+                
+                <!-- closed the for each cycle-->
+                <?php } ?>
+
+            </section>
+        </div>
+    </div>
+
+
     
-    <?php } ?>
     
 </body>
 </html>
